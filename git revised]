@@ -1,0 +1,384 @@
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ ssh-add ~/.ssh/github_rsa
+Could not open a connection to your authentication agent.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ ssh-agent -s
+SSH_AUTH_SOCK=/tmp/ssh-s5aYjGkQcC2g/agent.501; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=502; export SSH_AGENT_PID;
+echo Agent pid 502;
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ ssh-add ~/.ssh/github_rsa
+Could not open a connection to your authentication agent.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ cd e: test
+bash: cd: too many arguments
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 ~
+$ cd e:\test
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote -v
+origin  git@github.com:dameeta/testdemo.git (fetch)
+origin  git@github.com:dameeta/testdemo.git (push)
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ ssh-add ~/.ssh/github_rsa
+Could not open a connection to your authentication agent.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote -v
+origin  git@github.com:dameeta/testdemo.git (fetch)
+origin  git@github.com:dameeta/testdemo.git (push)
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin git://github.com/javadems/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+fatal: remote error:
+  You can't push to git://github.com/javadems/testdemo.git
+  Use https://github.com/javadems/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/javadems/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+Select an authentication method for 'https://github.com/':
+  1. Web browser (default)
+  2. Personal access token
+option (enter for default): 1
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/javadems/testdemo.git/' not found
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/javademohttps://github.com/javademos/testdemo.gits/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+remote: Not Found
+fatal: repository 'https://github.com/javademohttps://github.com/javademos/testd
+emo.gits/testdemo.git/' not found
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/javademohttps://github.com/javademos/testdemo.gits/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin master:master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/javademohttps://github.co
+m/javademos/testdemo.gits/testdemo.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+remote: Not Found
+fatal: repository 'https://github.com/javademohttps://github.com/javademos/testd
+emo.gits/testdemo.git/' not found
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/javademos/testdemo.gits
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/javademos/testdemo.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+Select an authentication method for 'https://github.com/':
+  1. Web browser (default)
+  2. Personal access token
+option (enter for default): 1
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/javademos/testdemo.git/' not found
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/javademos.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+remote: Not Found
+fatal: repository 'https://github.com/javademos.git/' not found
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git remote set-url origin https://github.com/dameeta/JavaDemos.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+Select an authentication method for 'https://github.com/':
+  1. Web browser (default)
+  2. Personal access token
+option (enter for default): 1
+info: please complete authentication in your browser...
+To https://github.com/dameeta/JavaDemos.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git pull
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 24 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (24/24), 6.20 KiB | 10.00 KiB/s, done.
+From https://github.com/dameeta/JavaDemos
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git push -u origin main
+To https://github.com/dameeta/JavaDemos.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ git pull ...
+fatal: '...' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test (main)
+$ cd JavaDemos/
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git pull ...
+fatal: '...' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git remote set-url origin https://github.com/dameeta/JavaDemos.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git remote set-url origin https://github.com/dameeta/JavaDemos.git
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git pull ...
+fatal: '...' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git pull
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 24 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (24/24), 6.20 KiB | 11.00 KiB/s, done.
+From https://github.com/dameeta/JavaDemos
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git commit
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Employee.java
+        MultipleInheritanceDemo.java
+        Order.java
+        Product.java
+        SingleInheritance.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git add .
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Employee.java
+        new file:   MultipleInheritanceDemo.java
+        new file:   Order.java
+        new file:   Product.java
+        new file:   SingleInheritance.java
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git commit
+hint: Waiting for your editor to close the file...
+[master 15f19b3] "commit changes"
+ 5 files changed, 148 insertions(+)
+ create mode 100644 Employee.java
+ create mode 100644 MultipleInheritanceDemo.java
+ create mode 100644 Order.java
+ create mode 100644 Product.java
+ create mode 100644 SingleInheritance.java
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git log
+commit 15f19b3676fab844e2a2648afcb3804b257586d5 (HEAD -> master)
+Author: dameeta <dameeta835@gmail.com>
+Date:   Sat Jun 12 15:56:55 2021 +0530
+
+    "commit changes"
+
+commit d146b8d79867e2dcdc620bff9d825579a20b6e77
+Author: dameeta <dameeta835@gmail.com>
+Date:   Fri Jun 11 15:33:48 2021 +0530
+
+    modified
+
+commit 28ce66e8c9278d1ba5a955175111ef05bdb49958
+Author: dameeta <dameeta835@gmail.com>
+Date:   Fri Jun 11 15:29:43 2021 +0530
+
+    demo done
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push --set-upsteam origin master
+error: unknown option `set-upsteam'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --force-if-includes   require remote updates to be integrated locally
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin maste
+error: src refspec maste does not match any
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin master
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (28/28), 5.20 KiB | 1.30 MiB/s, done.
+Total 28 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/dameeta/JavaDemos/pull/new/master
+remote:
+To https://github.com/dameeta/JavaDemos.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin mater:master
+error: src refspec mater does not match any
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/dameeta/JavaDemos.git'
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ADMIN@DESKTOP-6PTEN1D MINGW64 /e/test/JavaDemos (master)
+$
+
+
+
